@@ -1,2 +1,4 @@
-# marketplace-b2w-sdk
-SDK C# da API do Marketplace B2W
+## SDK C# da API do Marketplace B2W
+
+Documentação:
+* https://api-sandbox.bonmarketplace.com.br/docs/index.shtml
