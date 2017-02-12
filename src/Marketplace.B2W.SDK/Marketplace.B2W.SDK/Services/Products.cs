@@ -37,9 +37,7 @@ namespace Marketplace.B2W.SDK.Services
             {
                 var resource = "/product";
                 using (var webResponse = CreateWebRequest().GET(resource))
-                {
-                    apiResult.StatusCode = webResponse.StatusCode;
-                    
+                {                  
                     if (webResponse.StatusCode != HttpStatusCode.OK)
                     {
                         apiResult.Error = GetError(webResponse);
@@ -52,6 +50,8 @@ namespace Marketplace.B2W.SDK.Services
                             apiResult = JsonConvert.DeserializeObject<ProductsResult>(stream.ReadToEnd());
                         }
                     }
+
+                    apiResult.StatusCode = webResponse.StatusCode;
                 }
             }
             catch (Exception ex)

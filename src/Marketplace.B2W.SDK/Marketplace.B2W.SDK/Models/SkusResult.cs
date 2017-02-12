@@ -11,7 +11,7 @@ namespace Marketplace.B2W.SDK.Models
         /// <summary>
         /// (array[SkuResponse]): Array de skus associados ao parceiro informado
         /// </summary>
-        public IEnumerable<Sku> sku
+        public IEnumerable<Sku> skus
         {
             get { return _skus ?? (_skus = new List<Sku>()); }
             set { _skus = value; }
